@@ -1,0 +1,9 @@
+.allServices p {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(68, 75, 57);
+    font-weight: bold;
+}
+.allServices p:hover{
+   color:#0094d5;
+}

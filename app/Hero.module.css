@@ -1,0 +1,116 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0, 147, 214),
+      rgba(30, 160, 218, 0.4)
+    ),
+    url(../public/12.jpg);
+  direction: rtl;
+  padding: 30px;
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+  background-size: cover;
+  text-decoration: none;
+}
+.hero h1 {
+  color: rgb(224, 228, 231);
+  font-size: 1.7rem;
+  font-weight: 400px;
+  padding: 0;
+  line-height: 0.1rem;
+  margin-top: 3rem;
+}
+.hero h2 {
+  color: aliceblue;
+  font-size: 3rem;
+  font-weight: 600px;
+  line-height: 0.1rem;
+}
+.hero p {
+  color: rgb(223, 223, 236);
+  font-size: 1.5rem;
+  font-weight: 200px;
+}
+
+.hero a {
+  background-color: rgb(223, 223, 236);
+  color: rgb(0, 147, 214);
+  font-size: 2rem;
+  padding: 1.5rem 5rem;
+  border-radius: 0.5rem;
+}
+
+.lastParag {
+  font-size: 1.5rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* 
+نتوستم دکمهرو پایین بیارم 
+خونه خالی سمت چپ رو بسازم 
+انیمیشنش رو نساختم  */
+
+/* animations starts here */
+@keyframes fadaInOut {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes contentChanges {
+  0% {
+    content: " با تبادل کارها به مشتریان بیشتری خواهید رسید";
+  }
+  49% {
+    content: " با تبادل کارها به مشتریان بیشتری خواهید رسید";
+  }
+
+  51% {
+    content: "داد و ستد  در کارها میتواند راهی نو برای رسیدن به مشتریان بیشتر باشد ";
+  }
+
+  100% {
+    content: "داد و ستد  در کارها میتواند راهی نو برای رسیدن به مشتریان بیشتر باشد ";
+  }
+}
+
+.animation {
+  /* width: clamp(300px, 50vw ,600px); */
+  margin-bottom: 10rem;
+  align-content: center;
+}
+
+.animation:after {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: clamp(300px, 50vw, 900px);
+  animation-name: fadaInOut, contentChanges;
+  animation-duration: 6s, 12s;
+  animation-iteration-count: infinite;
+  text-align: center;
+  margin: 0 auto;
+}
