@@ -2,11 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import styles from "./Navbar.module.css";
 
 // @ts-ignore: Unreachable code error
 const Navbar = ({ open, setOpen }) => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className="navbar">
         <Link href="#">چطور کار میکند</Link>
         <Link href="#">وارد شوید</Link>
@@ -21,20 +22,12 @@ const Navbar = ({ open, setOpen }) => {
         }}
       ></div>
       <style jsx>{`
-        header {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-          margin: 0 5vw 0 5vw;
-        }
         .navbar {
           z-index: 20;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-end;
+          align-items: flex-start;
           position: fixed;
           top: 0;
           right: 0;
@@ -45,16 +38,7 @@ const Navbar = ({ open, setOpen }) => {
           transition: transform 0.3s ease-in-out;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
             rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        }
-
-        a {
-          margin: 1rem 0;
-          background-repeat: no-repeat;
-          background-position: right center;
-          padding-right: 2rem;
-        }
-        a:hover {
-          color: #278aff;
+          width: 50%;
         }
 
         .overlay {
