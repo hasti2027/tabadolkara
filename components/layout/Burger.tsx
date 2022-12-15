@@ -24,7 +24,10 @@ const Burger = () => {
             width: 40px;
             height: 40px;
             position: absolute;
-            top: clamp(17px, 2.5vw, 20px);
+             {
+              /* top: clamp(25px, 2.5vw, 30px); */
+            }
+            top: 30px;
             right: 5vw;
             z-index: 25;
           }
