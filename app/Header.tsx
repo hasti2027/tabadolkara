@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className={style.header}>
       <div className={style.logo}>
-        <img src="logo-3.png"></img>
+        <img src="logo-3.png" height="60px"></img>
       </div>
 
       <ul>

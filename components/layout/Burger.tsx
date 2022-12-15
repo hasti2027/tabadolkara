@@ -27,7 +27,7 @@ const Burger = () => {
              {
               /* top: clamp(25px, 2.5vw, 30px); */
             }
-            top: 30px;
+            top: 15px;
             right: 5vw;
             z-index: 25;
           }

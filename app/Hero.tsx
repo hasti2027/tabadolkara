@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import Link from "next/link";
 
-function HomePage() {
+function Hero() {
   return (
     <>
       <div className={styles.hero}>
@@ -21,4 +21,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Hero;
