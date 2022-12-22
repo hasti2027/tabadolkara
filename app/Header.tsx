@@ -6,12 +6,14 @@ function Header() {
   return (
     <header className={style.header}>
       <div className={style.logo}>
-        <img src="logo-3.png" height="60px"></img>
+        <Link href="/">
+          <img src="logo-3.png" height="60px"></img>
+        </Link>
       </div>
 
       <ul>
         <li>
-          <Link href="#">چطور کار میکند</Link>
+          <Link href="/about">چطور کار میکند</Link>
         </li>
 
         <li>

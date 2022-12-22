@@ -1,0 +1,122 @@
+.pageHead h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+  margin: 2rem auto;
+}
+
+.section p,
+.section h3 {
+  max-width: 400px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.grey {
+  background-color: #f5f5f5;
+}
+.video p {
+  font-size: 2rem;
+}
+.video {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0094d5;
+  direction: rtl;
+  padding: 2rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+  background-size: cover;
+  text-decoration: none;
+}
+.hero h2 {
+  color: aliceblue;
+  font-size: 2rem;
+  font-weight: 400px;
+  margin: 0;
+}
+.hero p {
+  color: rgb(223, 223, 236);
+  font-size: 1.5rem;
+  font-weight: 200px;
+}
+
+.hero a {
+  background-color: rgb(223, 223, 236);
+  color: rgb(0, 147, 214);
+  font-size: 1.5rem;
+  padding: 0.8rem 4rem;
+  border-radius: 0.3rem;
+}
+@keyframes fadaInOut {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes contentChanges {
+  0% {
+    content: " با تبادل کارها به مشتریان بیشتری خواهید رسید";
+  }
+  49% {
+    content: " با تبادل کارها به مشتریان بیشتری خواهید رسید";
+  }
+
+  51% {
+    content: "داد و ستد  در کارها میتواند راهی نو برای رسیدن به مشتریان بیشتر باشد ";
+  }
+
+  100% {
+    content: "داد و ستد  در کارها میتواند راهی نو برای رسیدن به مشتریان بیشتر باشد ";
+  }
+}
+
+.animation {
+  /* width: clamp(300px, 50vw ,600px); */
+  margin-bottom: 7rem;
+  align-content: center;
+  width: clamp(300px, 50vw, 900px);
+}
+
+.animation:after {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: clamp(300px, 50vw, 900px);
+  animation-name: fadaInOut, contentChanges;
+  animation-duration: 6s, 12s;
+  animation-iteration-count: infinite;
+  text-align: center;
+  margin: 0 auto;
+}
