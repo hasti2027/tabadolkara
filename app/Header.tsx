@@ -1,10 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Burger from "../components/layout/Burger";
 import style from "./Header.module.css";
 
 function Header() {
+  const [browserWindowHeight, setBrowserWindowHeight] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      setBrowserWindowHeight(window.scrollY)
+    );
+  });
+
   return (
-    <header className={style.header}>
+    <header
+      className={
+        browserWindowHeight > 0
+          ? style.header + " " + style.headerScroll
+          : style.header
+      }
+    >
       <div className={style.logo}>
         <Link href="/">
           <img src="logo-3.png" height="60px"></img>
