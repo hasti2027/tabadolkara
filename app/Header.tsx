@@ -7,6 +7,7 @@ import style from "./Header.module.css";
 
 function Header() {
   const [browserWindowHeight, setBrowserWindowHeight] = useState(0);
+  // console.log(browserWindowHeight);
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -22,12 +23,12 @@ function Header() {
           : style.header
       }
     >
+      {/* console.log() */}
       <div className={style.logo}>
         <Link href="/">
           <img src="logo-3.png" height="60px"></img>
         </Link>
       </div>
-
       <ul>
         <li>
           <Link href="/about">چطور کار میکند</Link>
@@ -45,7 +46,6 @@ function Header() {
           <Link href="#"> تماس با ما</Link>
         </li>
       </ul>
-
       <div className={style.burger}>
         <Burger />
       </div>
