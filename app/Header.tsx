@@ -26,22 +26,22 @@ function Header() {
       {/* console.log() */}
       <div className={style.logo}>
         <Link href="/">
-          <img src="logo-3.png" height="60px"></img>
+          <img
+            src={browserWindowHeight > 0 ? "logo-blue.png" : "logo-3.png"}
+            height="60px"
+          ></img>
         </Link>
       </div>
-      <ul>
+      <ul className={browserWindowHeight > 0 ? style.ulScroll : ""}>
         <li>
           <Link href="/about">چطور کار میکند</Link>
         </li>
-
         <li>
           <Link href="#">وارد شوید</Link>
         </li>
-
-        <li>
+        <li className={style.join}>
           <Link href="#">عضو شوید</Link>
         </li>
-
         <li>
           <Link href="#"> تماس با ما</Link>
         </li>
