@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Burger from "../components/layout/Burger";
 import style from "./Header.module.css";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [browserWindowHeight, setBrowserWindowHeight] = useState(0);
-  // console.log(browserWindowHeight);
+  const pathname = usePathname();
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -18,7 +19,7 @@ function Header() {
   return (
     <header
       className={
-        browserWindowHeight > 0
+        browserWindowHeight > 0 || pathname !== "/"
           ? style.header + " " + style.headerScroll
           : style.header
       }
@@ -27,12 +28,20 @@ function Header() {
       <div className={style.logo}>
         <Link href="/">
           <img
-            src={browserWindowHeight > 0 ? "logo-blue.png" : "logo-3.png"}
+            src={
+              browserWindowHeight > 0 || pathname !== "/"
+                ? "logo-blue.png"
+                : "logo-3.png"
+            }
             height="60px"
           ></img>
         </Link>
       </div>
-      <ul className={browserWindowHeight > 0 ? style.ulScroll : ""}>
+      <ul
+        className={
+          browserWindowHeight > 0 || pathname !== "/" ? style.ulScroll : ""
+        }
+      >
         <li>
           <Link href="/about">چطور کار میکند</Link>
         </li>

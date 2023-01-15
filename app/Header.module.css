@@ -58,6 +58,11 @@
 
 .headerScroll li {
   color: #33a9dd;
+  color: black;
+}
+
+.headerScroll a {
+  color: #33a9dd;
 }
 
 .burger {
@@ -66,6 +71,9 @@
 
 .header .join {
   background: #33a9dd;
+}
+
+.header .join a {
   color: white;
 }
 
