@@ -6,7 +6,7 @@ export default function WhatCustomersSays() {
     <div className={styles.slider}>
       <h2>اعضای سایت در مورد تبادل کارا چه می گویند</h2>
       <section>
-        <img src="20191205_160349.jpg" alt="" width={405} height={500} />
+        <img src="101.jpg" alt="" width={405} height={500} />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt
           voluptatem commodi nihil adipisci repudiandae eos deleniti est
@@ -21,7 +21,7 @@ export default function WhatCustomersSays() {
           praesentium! Dolorem reiciendis voluptates quaerat voluptatum non
           saepe praesentium possimus dicta nostrum!
         </p>
-        <img src="20191205_161236.jpg" alt="" width={405} height={500} />
+        <img src="101.jpg" alt="" width={405} height={500} />
       </section>
       <div className={styles.slideMiddle}>
         <div>
@@ -54,10 +54,15 @@ export default function WhatCustomersSays() {
 
           <img src="100.jpg" alt="" />
         </div>
-        <a className={styles.prev}>&#10094;</a>
-        <a className={styles.next}>&#10095;</a>
       </div>
-      <br></br>
+      <div className={styles.next}>
+        <a>&#10095;</a>
+      </div>
+      <div className={styles.prev}>
+        <a>&#10094;</a>
+      </div>
+
+      <br />
       <div className={styles.dotContainer}>
         <span></span>
         <span></span>
