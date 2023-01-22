@@ -54,11 +54,14 @@ export default function WhatCustomersSays() {
 
           <img src="100.jpg" alt="" />
         </div>
-        <div className={styles.dotContainer}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <a className={styles.prev}>&#10094;</a>
+        <a className={styles.next}>&#10095;</a>
+      </div>
+      <br></br>
+      <div className={styles.dotContainer}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );
