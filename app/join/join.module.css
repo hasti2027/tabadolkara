@@ -48,3 +48,24 @@
 .joinPage p .underButton {
   border-top: 1px solid grey;
 }
+
+.joinPage button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.joinPage .google {
+  border: 1px solid lightgrey;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem 1rem 2rem;
+  margin: 1rem 0;
+}
+
+.google span {
+  background-image: url(/download.png);
+  background-size: 40px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 0.5rem 3rem 0.5rem 0;
+}

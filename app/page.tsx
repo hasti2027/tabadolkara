@@ -1,5 +1,6 @@
 import AllServices from "./AllServies";
 import Hero from "./Hero";
+import WhatCustomersSays from "./WhatCustomersSays";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
       <Hero />
       {/* @ts-expect-error Server Component */}
       <AllServices />
+      <WhatCustomersSays />
     </div>
   );
 }

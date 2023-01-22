@@ -49,7 +49,7 @@ function Header() {
           <Link href="#">وارد شوید</Link>
         </li>
         <li className={style.join}>
-          <Link href="#">عضو شوید</Link>
+          <Link href="/join">عضو شوید</Link>
         </li>
         <li>
           <Link href="#"> تماس با ما</Link>
